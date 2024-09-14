@@ -185,7 +185,7 @@ services.AddSingleton(fsql);
 
 > new FreeSqlCloud() 多连接管理
 
-> new FreeSqlCloud("myapp") 开启 TCC/SAGA 事务生效
+> new FreeSqlCloud("myapp") 开启 TCC/SAGA 事务生效,此操作会在数据库中创建多个表。(oralce 12.2之前可能会导致 ORA-00972: identifier is too long)
 
 FreeSqlCloud 的访问方式和 IFreeSql 一样：
 
